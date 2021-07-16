@@ -1,0 +1,36 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <div class="header">
+    <img src="./image/logo2.png" alt="Logo">
+    <img src="./image/chef.png" alt="logo">
+    </div>
+    <body> 
+    <div class="block-table">
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-warning">
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+    <body> 
+            <tbody>
+                {% for item in items %}
+                    <tr id="{{ item.id }}" class="item-post">
+                        <td scope="row">
+                            {{ item.id }}
+                        </td>
+                        <td>
+                            {{ item.title}}
+                        </td>    
+                        <td>
+                            {{ item.author}}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>    
+{% endblock %}
